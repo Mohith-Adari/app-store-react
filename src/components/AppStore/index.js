@@ -310,7 +310,9 @@ class AppStore extends Component {
     const filteredProjects = appsList.filter(
       eachprojectDetails =>
         eachprojectDetails.category === activeTabId &&
-        eachprojectDetails.appName.toLowerCase().includes(searchInput),
+        eachprojectDetails.appName
+          .toLowerCase()
+          .includes(searchInput.toLowerCase()),
     )
     return filteredProjects
   }
@@ -329,7 +331,11 @@ class AppStore extends Component {
               onChange={this.onChangeInput}
               className="input-style"
             />
-            <img src={URL} alt="search icon" className="search-icon" />
+            <img
+              src="https://assets.ccbp.in/frontend/react-js/app-store/app-store-search-img.png"
+              alt="search icon"
+              className="search-icon"
+            />
           </div>
 
           <ul className="tabs-container">
